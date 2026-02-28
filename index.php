@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-
+ <!-- hero section -->
 <header class="navbar">
     <div class="nav-container">
 
@@ -19,7 +19,7 @@
       <!-- Menu -->
       <nav class="menu" id="navMenu">
         <a href="<?php echo site_url('/index'); ?>">
-        <a href="about.html">About Us</a>
+      <a href="<?php echo site_url('/about'); ?>">
         <a href="services.html">Services</a>
         <a href="Contact.html">Contact Us</a>
         <a href="rental.html">Rental</a>
@@ -438,6 +438,7 @@
 
     });
   </script>
-  
+  <!-- Hero section end -->
+  <!-- about start -->
 
 <?php get_footer(); ?>
