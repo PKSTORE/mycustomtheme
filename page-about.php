@@ -1,7 +1,9 @@
-<?php get_header(); ?>
+<?php
 /*
 Template Name: About Page
 */
+<?php get_header(); ?>
+
 <!-- about start -->
     <header class="navbar">
         <div class="nav-container">
@@ -131,4 +133,5 @@ Template Name: About Page
         <div class="footer-bottom">
             © 2026 RR COMPUTERS.
         </div>
+        ?>
         <?php get_footer(); ?>
