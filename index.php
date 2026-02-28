@@ -18,11 +18,11 @@
 
       <!-- Menu -->
       <nav class="menu" id="navMenu">
-       <a href="<?php echo site_url('/index'); ?>">Home</a>
-     <a href="<?php echo site_url('/about'); ?>">About</a>
-        <a href="services.html">Services</a>
-        <a href="Contact.html">Contact Us</a>
-        <a href="rental.html">Rental</a>
+      <a href="<?php echo site_url('/'); ?>">Home</a>
+    <a href="<?php echo site_url('/about'); ?>">About</a>
+    <a href="<?php echo site_url('/services'); ?>">Services</a>
+    <a href="<?php echo site_url('/contact'); ?>">Contact</a>
+    <a href="<?php echo site_url('/rental'); ?>">Rental</a>
         <!-- <a href="#ticket" class="mobile-btn">Complaint Ticket</a> -->
       </nav>
 
