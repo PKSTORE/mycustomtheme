@@ -10,7 +10,7 @@ Version: 1.0
     padding: 0;
     box-sizing: border-box;
 }
-
+/* hero */
 .hero {
   position: relative;
   height: 90vh;
@@ -107,7 +107,7 @@ Version: 1.0
     right: 20px;
   }
 }
-
+/* hero2 */
 .hero-2 {
   background: #ffffff;
   padding: 90px 20px;
@@ -243,6 +243,7 @@ Version: 1.0
     font-size: 44px;
   }
 }
+/* hero3 */
 .hero-3 {
   padding: 90px 20px;
   background: #ffffff;
@@ -338,6 +339,7 @@ Version: 1.0
     100% { transform: translateX(-660px); }
   }
 }
+/* hero4 */
 .hero-4 {
   padding: 90px 20px;
   background: #ffffff;
@@ -417,6 +419,7 @@ margin-top: -100px;
     gap: 40px;
   }
 }
+/* hero5 */
 .hero-5 {
   padding: 90px 20px;
   background: #ffffff;
@@ -539,7 +542,7 @@ margin-top: -100px;
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
-
+/* navbar */
 .navbar {
   background: #ffffff;
   border-bottom: 1px solid #e5e5e5;
@@ -645,6 +648,7 @@ margin-top: -100px;
     font-weight: 600;
   }
 }
+/* footer */
 .site-footer {
   background: #134e3a;
   color: #ffffff;
