@@ -6,7 +6,7 @@
             <!-- Logo -->
             <div class="logo">
                 <a href="index.html">
-                    <img src="img/RRC Long logo.png" alt="RR Computers Logo">
+                     <img src="<?php echo get_template_directory_uri(); ?>/img/RRC-Long-logo.png">
                 </a>
 
             </div>
