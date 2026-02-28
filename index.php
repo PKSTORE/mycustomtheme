@@ -19,7 +19,7 @@
       <!-- Menu -->
       <nav class="menu" id="navMenu">
       <a href="<?php echo site_url('/'); ?>">Home</a>
-    <a href="<?php echo site_url('/about'); ?>">About</a>
+    <a href="<?php echo site_url('/pages-about.php'); ?>">About</a>
     <a href="<?php echo site_url('/services'); ?>">Services</a>
     <a href="<?php echo site_url('/contact'); ?>">Contact</a>
     <a href="<?php echo site_url('/rental'); ?>">Rental</a>
