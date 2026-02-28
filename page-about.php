@@ -2,6 +2,7 @@
 /*
 Template Name: About Page
 */
+?>
 <?php get_header(); ?>
 
 <!-- about start -->
@@ -133,5 +134,5 @@ Template Name: About Page
         <div class="footer-bottom">
             © 2026 RR COMPUTERS.
         </div>
-        ?>
+     
         <?php get_footer(); ?>
