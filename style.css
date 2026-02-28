@@ -748,3 +748,166 @@ margin-top: -100px;
     text-align: center;
   }
 }
+/* about css */
+/* About 1 Section */
+.about-1 {
+  padding: 80px 20px;
+  background-color: #ffffff;
+}
+
+.about-1-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+/* Content */
+.about-1-content h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #111;
+  margin-bottom: 20px;
+}
+
+.about-1-content p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 15px;
+}
+.about-1-content p a {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 15px;
+}
+/* Stats */
+.about-1-stats {
+  display: flex;
+  gap: 60px;
+  margin-top: 40px;
+}
+
+.stat-box h3 {
+  font-size: 48px;
+  color: #0a4d3c;
+  margin-bottom: 5px;
+}
+
+.stat-box span {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Image */
+.about-1-image img {
+  width: 100%;
+  max-width: 470px;
+  display: block;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 250px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .about-1-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-1-stats {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-1-content h2 {
+    font-size: 28px;
+  }
+
+  .stat-box h3 {
+    font-size: 36px;
+  }
+
+  .about-1-stats {
+    flex-direction: column;
+    gap: 25px;
+  }
+}
+/* About 2 Section */
+.about-2 {
+  padding: 80px 20px;
+  background-color: #ffffff;
+}
+
+.about-2-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+/* Box */
+.about-2-box {
+  position: relative;
+}
+
+.about-2-line {
+  width: 40px;
+  height: 3px;
+  background-color: #0a4d3c;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+/* Headings */
+.about-2-box h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 15px;
+}
+
+.about-2-box h4 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #0a4d3c;
+  margin-bottom: 20px;
+}
+
+/* Text */
+.about-2-box p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .about-2-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-2-box h2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-2-box h2 {
+    font-size: 26px;
+  }
+
+  .about-2-box h4 {
+    font-size: 16px;
+  }
+}
