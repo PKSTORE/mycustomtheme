@@ -1,4 +1,7 @@
 <?php get_header(); ?>
+/*
+Template Name: About Page
+*/
 <!-- about start -->
     <header class="navbar">
         <div class="nav-container">
