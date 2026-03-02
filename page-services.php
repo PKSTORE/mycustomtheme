@@ -149,25 +149,26 @@
       </div>
 
       <!-- Column 2: Pages -->
-      <div class="footer-col">
+     <div class="footer-col">
         <h4>Qucik Links</h4>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="Contact.html">Contacts</a></li>
-          <li><a href="rental.html">Rental</a></li>
-        </ul>
+                    <li><a href="<?php echo site_url('/'); ?>">Home</a></li>
+                    <li><a href="<?php echo site_url('/about'); ?>">About</a></li>
+                    <li><a href="<?php echo site_url('/services'); ?>">Services</a></li>
+                    <li><a href="<?php echo site_url('/contact'); ?>">Contact</a></li>
+                    <li><a href="<?php echo site_url('/rental'); ?>">Rental</a></li>
+                </ul>
       </div>
+
       <!-- Column 3: Services -->
       <div class="footer-col">
         <h4>Services</h4>
-        <ul>
-          <li><a href="services.html">Laptop Repair / Computer Repair</a></li>
-          <li><a href="services.html">Cleaning Laptops / Replacing Thermal Paste</a></li>
-          <li><a href="services.html">Data Recovery</a></li>
-          <li><a href="services.html">OS Installation</a></li>
-          <li><a href="services.html">Assembling a Personal Computer at Home</a></li>
+           <ul>
+          <li><a href="<?php echo site_url('/services'); ?>">Laptop Repair / Computer Repair</a></li>
+          <li><a href="<?php echo site_url('/services'); ?>">Cleaning Laptops / Replacing Thermal Paste</a></li>
+          <li><a href="<?php echo site_url('/services'); ?>">Data Recovery</a></li>
+          <li><a href="<?php echo site_url('/services'); ?>">OS Installation</a></li>
+          <li><a href="<?php echo site_url('/services'); ?>">Assembling a Personal Computer at Home</a></li>
         </ul>
       </div>
 
