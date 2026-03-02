@@ -323,11 +323,11 @@
       <!-- Column 2: Pages -->
       <div class="footer-col">
         <ul>
-           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="Contact.html">Contacts</a></li>
-          <li><a href="rental.html">Rental</a></li>
+           <li><a href="<?php echo site_url('/'); ?>">Home</a></li>
+          <li><a href="<?php echo site_url('/about'); ?>">About</a></li>
+          <li><a href="<?php echo site_url('/services'); ?>">Services</a></li>
+          <li><a href="<?php echo site_url('/contact'); ?>">Contact</a></li>
+          <li><a href="<?php echo site_url('/rental'); ?>">Rental</a></li>
         </ul>
       </div>
 
