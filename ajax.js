@@ -15,3 +15,13 @@ document.getElementById("enquiryForm").addEventListener("submit", function (e) {
       document.getElementById("enquiryForm").reset();
     });
 });
+document.getElementById("sing_up").addEventListener("submit", function (e) {
+  let checkbox = document.getElementById("agreeTerms");
+
+  if (!checkbox.checked) {
+    e.preventDefault();
+    alert(
+      "Please accept the Privacy Policy and Terms of Service before submitting.",
+    );
+  }
+});
