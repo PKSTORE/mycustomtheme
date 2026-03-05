@@ -76,7 +76,7 @@ Template Name: About Page
                 </p>
             <!-- Right Image -->
             <div class="about-1-image">
-                <img src="img/about-01-470x580.jpg" alt="About Bhawana Computers">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/about-01-470x580.jpg" alt="About RR Computers">
             </div>
 
         </div>
