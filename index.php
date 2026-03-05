@@ -234,7 +234,7 @@
       </div>
       <!-- CTA -->
       <div class="hero-4-cta">
-        <a href="Contact.html">Sign up for Repair →</a>
+       <a href="<?php echo site_url('/contact'); ?>">Sign up for Repair →</a>
       </div>
 
     </div>
@@ -314,7 +314,7 @@
         </p>
 
         <div class="footer-social">
-          <a href="#" aria-label="Facebook"><img src="img/facebook.png" alt=""></a>
+          <a href="https://www.google.com/" aria-label="Facebook"><img src="img/facebook.png" alt=""></a>
           <a href="#" aria-label="Twitter"><img src="img/1707222563twitter-logo-png.png" alt=""></a>
           <a href="#" aria-label="Instagram"><img src="img/instagram.png" alt=""></a>
         </div>
