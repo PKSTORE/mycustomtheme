@@ -14,7 +14,7 @@ Version: 1.0
 .hero {
   position: relative;
   height: 90vh;
-  background: url('./img/background.png') center/cover no-repeat;
+  background: url('./img/background') center/cover no-repeat;
   display: flex;
   align-items: center;
   padding-left: 80px;
