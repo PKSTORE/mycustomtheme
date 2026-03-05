@@ -69,6 +69,7 @@ Template Name: About Page
                 </p>
                 <p>
                     If you need reliable IT support for your home or office, 
+                    <br>
                     feel free to
                    <a href="<?php echo site_url('/contact'); ?>">Contact Our Team</a>
                     for quick assistance.
