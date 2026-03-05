@@ -44,7 +44,7 @@
         </p>
 
       </div>
-      <a href="Contact.html">
+      <a href="<?php echo site_url('/contact'); ?>">
         <div class="section-1-grid">
           <div class="offer-card">
             <img src="img/service_1_400x250_HD.png" alt="Laptop & Desktop Repair">

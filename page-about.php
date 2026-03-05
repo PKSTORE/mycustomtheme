@@ -8,15 +8,12 @@ Template Name: About Page
 <!-- about start -->
     <header class="navbar">
         <div class="nav-container">
-
             <!-- Logo -->
             <div class="logo">
               <a href="<?php echo site_url('/'); ?>">
                      <img src="<?php echo get_template_directory_uri(); ?>/img/RRC-Long-logo.png">
                 </a>
-
             </div>
-
             <!-- Hamburger -->
             <div class="hamburger" onclick="toggleMenu()">
                 ☰
@@ -53,7 +50,7 @@ Template Name: About Page
                     complete laptop and desktop services under one roof.
                 </p>
                 <p>
-                    We offer a wide range of <a href="services.html">services</a> including laptop and desktop repair,
+                    We offer a wide range of<a href="<?php echo site_url('/services'); ?>">Services</a>including laptop and desktop repair,
                     computer sales and rentals,
                     hardware upgrades, networking solutions, CCTV installation, firewall security, data recovery, and
                     refurbished systems. Our goal is to ensure smooth, secure, and efficient performance of your systems
@@ -72,7 +69,7 @@ Template Name: About Page
                 </p>
                 <p>
                     If you need reliable IT support for your home or office, feel free to
-                    <a href="Contact.html">contact our team</a>
+                   <a href="<?php echo site_url('/contact'); ?>">Contact Our Team</a>
                     for quick assistance.
                 </p>
             <!-- Right Image -->

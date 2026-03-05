@@ -149,7 +149,7 @@
         </a>
 
         <!-- Card 3 -->
-        <a href="services.html">
+    <a href="<?php echo site_url('/services'); ?>">
           <div class="hero-3-card">
             <img src="img/SERVICE 3.png" alt="Laptop & Desktop Repair">
             <h3>Laptop & Desktop Repair</h3>
@@ -161,7 +161,7 @@
           </div>
         </a>
         <!-- Card 4 -->
-        <a href="services.html">
+     <a href="<?php echo site_url('/services'); ?>">
           <div class="hero-3-card">
             <img src="img/SERVICE 4.1.png" alt="Laptop & Desktop Sales">
             <h3>Laptop & Desktop Sales</h3>
@@ -173,7 +173,7 @@
           </div>
         </a>
         <!-- Card 5 -->
-        <a href="services.html">
+      <a href="<?php echo site_url('/services'); ?>">
           <div class="hero-3-card">
             <img src="img/service_7_400x250_HD.png" alt="CCTV Installation">
             <h3>CCTV Installation</h3>
