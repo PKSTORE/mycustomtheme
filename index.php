@@ -275,7 +275,9 @@
             <input type="tel" placeholder="Your phone" required id="yourphone">
             <small class="error"></small>
           </div>
-
+          <div class="input-box">
+            <textarea name="complaint_message" placeholder="Describe your complaint" required></textarea>
+          </div> 
           <button type="submit">Complain Ticket</button>
         </form>
         <!-- Checkbox inline with text -->
@@ -288,8 +290,6 @@
             <a href="#">Terms of Service</a>
           </span>
         </label>
-
-        </form>
       </div>
 
     </div>
