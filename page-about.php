@@ -68,7 +68,8 @@ Template Name: About Page
                     clients and a passion for technology-driven solutions.
                 </p>
                 <p>
-                    If you need reliable IT support for your home or office, feel free to
+                    If you need reliable IT support for your home or office, 
+                    feel free to
                    <a href="<?php echo site_url('/contact'); ?>">Contact Our Team</a>
                     for quick assistance.
                 </p>
