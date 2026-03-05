@@ -8,3 +8,71 @@ function mycustomtheme_enqueue_styles() {
     );
 }
 add_action('wp_enqueue_scripts', 'mycustomtheme_enqueue_styles');
+function rr_load_ajax_script(){
+
+wp_enqueue_script('rr-ajax', get_template_directory_uri().'/ajax.js', array(), null, true);
+
+wp_localize_script('rr-ajax','rr_ajax',array(
+'ajax_url' => admin_url('admin-ajax.php')
+));
+
+}
+
+add_action('wp_enqueue_scripts','rr_load_ajax_script');
+function rr_save_enquiry(){
+
+$name = sanitize_text_field($_POST['client_name']);
+$phone = sanitize_text_field($_POST['client_phone']);
+
+if(empty($name) || empty($phone)){
+wp_send_json_error();
+}
+
+/* Save to WP */
+
+$post_id = wp_insert_post(array(
+'post_title' => $name,
+'post_content' => 'Phone: '.$phone,
+'post_type' => 'rr_enquiry',
+'post_status' => 'publish'
+));
+
+/* Email Notification */
+
+$admin_email = get_option('sharmapiyush1342@gmail.com');
+
+wp_mail(
+$admin_email,
+"New Enquiry Received",
+"Name: $name \nPhone: $phone"
+);
+
+wp_send_json_success();
+
+}
+
+add_action('wp_ajax_save_enquiry','rr_save_enquiry');
+add_action('wp_ajax_nopriv_save_enquiry','rr_save_enquiry');
+function rr_enquiry_columns($columns){
+
+$columns['phone'] = 'Phone';
+
+return $columns;
+
+}
+
+add_filter('manage_rr_enquiry_posts_columns','rr_enquiry_columns');
+
+
+function rr_enquiry_column_data($column,$post_id){
+
+if($column == 'phone'){
+
+$content = get_post_field('post_content',$post_id);
+echo $content;
+
+}
+
+}
+
+add_action('manage_rr_enquiry_posts_custom_column','rr_enquiry_column_data',10,2);

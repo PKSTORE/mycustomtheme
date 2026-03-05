@@ -91,23 +91,22 @@
         <h3>Enquire Now</h3>
         <p>Enter your contact details to schedule a repair.</p>
 
-        <form  class="hero-2-form"git  id="enquiryForm">
-<div class="input-box">
-<input type="text" name="client_name" placeholder="Your name" required>
-</div>
+        <form  class="hero-2-form" id="enquiryForm">
+         <div class="input-box">
+         <input type="text" name="client_name" placeholder="Your name" required>
+        </div>
 
-<div class="input-box">
-<input type="tel" name="client_phone" placeholder="Your phone" required>
-</div>
+         <div class="input-box">
+           <input type="tel" name="client_phone" placeholder="Your phone" required>
+          </div>
 
-<button type="submit">Submit Request</button>
+          <button type="submit">Submit Request</button>
 
-<p id="formMessage"></p>
+          <p id="formMessage"></p>
 
-</form>
+          </form>
       </div>
-
-    </div>
+     </div>
   </section>
   <!-- section hero 3 -->
   <section class="hero-3">
