@@ -267,12 +267,12 @@
 
         <form class="hero-5-form" id="sing_up">
           <div class="hero-5-input">
-            <input type="text" placeholder="Your name" required id="yourname">
+            <input type="text" name="complaint_name" placeholder="Your name" required id="yourname">
             <small class="error"></small>
           </div>
 
           <div class="hero-5-input">
-            <input type="tel" placeholder="Your phone" required id="yourphone">
+            <input type="tel" name="complaint_phone" placeholder="Your phone" required id="yourphone">
             <small class="error"></small>
           </div>
           <div class="hero-5-input">
