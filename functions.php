@@ -8,6 +8,25 @@ function mycustomtheme_enqueue_styles() {
     );
 }
 add_action('wp_enqueue_scripts', 'mycustomtheme_enqueue_styles');
+function rr_create_enquiry_post_type(){
+
+register_post_type('rr_enquiry', array(
+
+'labels' => array(
+'name' => 'Enquiries',
+'singular_name' => 'Enquiry'
+),
+
+'public' => false,
+'show_ui' => true,
+'menu_icon' => 'dashicons-email',
+'supports' => array('title','editor')
+
+));
+
+}
+
+add_action('init','rr_create_enquiry_post_type');
 function rr_load_ajax_script(){
 
 wp_enqueue_script('rr-ajax', get_template_directory_uri().'/ajax.js', array(), null, true);
