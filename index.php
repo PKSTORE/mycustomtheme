@@ -265,7 +265,7 @@
           Enter your contact details to schedule a Meeting.
         </p>
 
-        <form class="hero-5-form" id="sing_up" method="post">
+        <form id="sing_up" method="post">
           <div class="hero-5-input">
             <input type="text" name="complaint_name" placeholder="Your name" required>
             <small class="error"></small>
