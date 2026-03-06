@@ -301,11 +301,9 @@
         NEW DELHI
       </p>
        <p class="footer-email">
-      Email:
-      <?php
-       $email = "info@rrcomputers.net";
-       echo '<a href="mailto:'.$email.'?subject=Support Request">'.$email.'</a>';
-      ?>
+      <a href="mailto:info@rrcomputers.net" target="_blank" rel="noopener">
+info@rrcomputers.net
+</a>
 </p>
      
 
