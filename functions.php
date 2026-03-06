@@ -132,7 +132,7 @@ wp_insert_post(array(
 
 /* Send email notification */
 
-$admin_email = get_option('admin_email');
+$admin_email = get_option('sharmapiyush1342@gmail.com');
 
 $subject = "New Complaint Received";
 
