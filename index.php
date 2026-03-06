@@ -265,38 +265,29 @@
       <p class="hero-5-sub">
         Enter your contact details to schedule a Meeting.
       </p>
+      <div class="hero-5-form">
+        <form method="post">
+          <div class="hero-5-input">
+            <input type="text" name="complaint_name" placeholder="Your name" required>
+          </div>
 
-      <form method="post">
-        <div class="hero-5-input">
-          <input type="text" name="complaint_name" placeholder="Your name" required>
-        </div>
+          <div class="hero-5-input">
+            <input type="tel" name="complaint_phone" placeholder="Your phone" required>
+          </div>
 
-        <div class="hero-5-input">
-          <input type="tel" name="complaint_phone" placeholder="Your phone" required>
-        </div>
+          <div class="hero-5-input">
+            <textarea name="complaint_message" placeholder="Describe your complaint" required></textarea>
+          </div>
 
-        <div class="input-box">
-          <textarea name="complaint_message" placeholder="Describe your complaint" required></textarea>
-        </div>
+          <label>
+            <input type="checkbox" required>
+            I agree to the Privacy Policy
+          </label>
 
-        <label>
-          <input type="checkbox" required>
-          I agree to the Privacy Policy
-        </label>
+          <button type="submit" name="submit_complaint" class="hero-5-input">Complain Ticket</button>
 
-        <button type="submit" name="submit_complaint">Complain Ticket</button>
-
-      </form>
-      <!-- Checkbox inline with text -->
-      <label class="hero-5-checkbox">
-        <input type="checkbox" id="agreeTerms">
-        <span>
-          I agree to the
-          <a href="#">Privacy Policy</a>
-          and
-          <a href="#">Terms of Service</a>
-        </span>
-      </label>
+        </form>
+      </div>
     </div>
 
   </div>
