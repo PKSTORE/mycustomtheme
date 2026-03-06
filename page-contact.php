@@ -84,21 +84,21 @@
 
       <!-- Right Form -->
       <div class="contact-1-form">
-        <form>
+        <form method= "post">
           <div class="form-group">
-            <input type="text" placeholder="Your name" required>
+         <input type="text" name="contact_name" placeholder="Your name" required>
           </div>
 
           <div class="form-group">
-            <input type="tel" placeholder="Your phone" required>
+            <input type="tel" name="contact_phone" placeholder="Your phone" required>
           </div>
 
           <div class="form-group">
-            <input type="email" placeholder="Your mail" required>
+          <input type="email" name="contact_email" placeholder="Your mail" required>
           </div>
 
           <div class="form-group">
-            <textarea placeholder="Your message"></textarea>
+           <textarea name="contact_message" placeholder="Your message"></textarea>
           </div>
 
           <button type="submit">Submit Request</button>

@@ -148,3 +148,53 @@ wp_mail($admin_email, $subject, $email_message);
 }
 
 add_action('init','rr_save_complaint_data');
+/* contact Backend */
+function rr_save_contact_data(){
+
+if(isset($_POST['submit_contact'])){
+
+$name = sanitize_text_field($_POST['contact_name']);
+$phone = sanitize_text_field($_POST['contact_phone']);
+$email = sanitize_email($_POST['contact_email']);
+$message = sanitize_textarea_field($_POST['contact_message']);
+
+wp_insert_post(array(
+'post_title' => $name,
+'post_content' => "Phone: ".$phone."\nEmail: ".$email."\n\nMessage:\n".$message,
+'post_type' => 'rr_contact',
+'post_status' => 'publish'
+));
+
+$admin_email = get_option('admin_email');
+
+$subject = "New Contact Message";
+
+$body = "New message received:\n\n";
+$body .= "Name: $name\n";
+$body .= "Phone: $phone\n";
+$body .= "Email: $email\n";
+$body .= "Message: $message\n";
+
+wp_mail($admin_email,$subject,$body);
+
+}
+
+}
+
+add_action('init','rr_save_contact_data');
+function rr_create_contact_post_type(){
+
+register_post_type('rr_contact', array(
+'labels' => array(
+'name' => 'Contact Messages',
+'singular_name' => 'Contact Message'
+),
+'public' => false,
+'show_ui' => true,
+'menu_icon' => 'dashicons-email',
+'supports' => array('title','editor')
+));
+
+}
+
+add_action('init','rr_create_contact_post_type');
