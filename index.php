@@ -279,13 +279,11 @@
             <textarea name="complaint_message" placeholder="Describe your complaint" required></textarea>
           </div>
 
-          <label>
+          <label class="hero-5-checkbox">
             <input type="checkbox" required>
             I agree to the Privacy Policy
           </label>
-
           <button type="submit" name="submit_complaint" class="hero-5-input">Complain Ticket</button>
-
         </form>
       </div>
     </div>
