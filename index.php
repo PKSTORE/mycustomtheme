@@ -67,7 +67,7 @@
       </h2>
 
       <p>
-        RR Computers is a trusted IT and computer services company based in New Delhi, providing professional laptop
+        Akshita Vault is a trusted IT and computer services company based in New Delhi, providing professional laptop
         and desktop repair, system diagnostics, networking, and IT support services. We focus on delivering reliable,
         secure, and cost-effective technology solutions for individuals, small businesses, and enterprises, ensuring
         quality service and customer satisfaction at every step.
@@ -192,7 +192,7 @@
     <div class="hero-4-header">
       <h2>Why Choose Us</h2>
       <p>
-        RR Computers is a trusted computer repair and IT service provider in all over India, known for delivering
+        Akshita Vault is a trusted computer repair and IT service provider in all over India, known for delivering
         reliable
         laptop servicing, desktop support, system diagnostics, and professional technical solutions to homes and
         businesses.
@@ -344,7 +344,7 @@ info@rrcomputers.net
 
   <!-- Bottom -->
   <div class="footer-bottom">
-    © 2026 RR COMPUTERS.
+    © 2026 Akshita Vault.
   </div>
 </footer>
 

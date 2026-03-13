@@ -44,7 +44,7 @@ Template Name: About Page
             <div class="about-1-content">
                 <h1>ABOUT US</h1>
                 <p>
-                    RR Computers is a trusted IT and computer services company based in New Delhi, dedicated to
+                    Akshita Vault is a trusted IT and computer services company based in New Delhi, dedicated to
                     delivering reliable and affordable technology solutions for individuals, small businesses, and
                     corporate clients. With years of hands-on experience in the IT industry, we specialize in providing
                     complete laptop and desktop services under one roof.
@@ -57,14 +57,14 @@ Template Name: About Page
                     with quick turnaround time and professional support.
                 </p>
                 <p>
-                    At RR Computers, we believe in quality service, transparency, and customer satisfaction. Our skilled
+                    At Akshita Vault, we believe in quality service, transparency, and customer satisfaction. Our skilled
                     technicians use genuine spare parts and modern tools to diagnose and resolve issues accurately.
                     Whether you need technical support for your home, office, or business, we focus on delivering
                     cost-effective solutions tailored to your needs.
                 </p>
                 <p>
                     We are committed to building long-term relationships with our customers by providing dependable IT
-                    support, honest guidance, and prompt service. RR Computers continues to grow with the trust of our
+                    support, honest guidance, and prompt service. Akshita Vault continues to grow with the trust of our
                     clients and a passion for technology-driven solutions.
                 </p>
                 <p>
@@ -76,7 +76,7 @@ Template Name: About Page
                 </p>
             <!-- Right Image -->
             <div class="about-1-image">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/about-01-470x580.jpg" alt="About RR Computers">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/about-01-470x580.jpg" alt="About Akshita Vaults">
             </div>
 
         </div>
@@ -131,7 +131,7 @@ Template Name: About Page
 
         <!-- Bottom -->
         <div class="footer-bottom">
-            © 2026 RR COMPUTERS.
+            © 2026 Akshita Vault.
         </div>
        <!-- script 1 -->
     <script>

@@ -38,7 +38,7 @@
         <span class="section-1-line"></span>
         <h1>Our IT & Computer Services</h1>
         <p>
-          RR Computers provides complete IT and computer services for homes, offices, and businesses in New Delhi. From
+          Akshita Vault provides complete IT and computer services for homes, offices, and businesses in New Delhi. From
           laptop and desktop repair to rentals, sales, networking, security, and data recovery, we deliver reliable and
           cost-effective technology solutions with professional support.
         </p>
@@ -69,7 +69,7 @@
             <img src="<?php echo get_template_directory_uri(); ?>/img/service_3_400x250_HD.png" alt="Laptop & Desktop Sales">
             <h2>Laptop & Desktop Sales</h2>
             <p>
-              RR Computers offers new and refurbished laptops and desktops at competitive prices. All systems are tested
+              Akshita Vaults offers new and refurbished laptops and desktops at competitive prices. All systems are tested
               for quality, performance, and reliability before sale.
             </p>
           </div>
@@ -176,7 +176,7 @@
 
     <!-- Bottom -->
     <div class="footer-bottom">
-      © 2026 RR COMPUTERS.
+      © 2026 Akshita Vault.
     </div>
   </footer>
   <!-- script 1 -->

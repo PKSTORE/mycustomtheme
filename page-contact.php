@@ -165,7 +165,7 @@
 
   <!-- Bottom -->
   <div class="footer-bottom">
-    © 2026 RR COMPUTERS.
+    © 2026 Akshita Vault.
   </div>
 </footer>
 <!-- script 1 -->
