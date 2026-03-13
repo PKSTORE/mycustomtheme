@@ -44,7 +44,7 @@
     </h1>
 
     <p>
-      R.R. Computers delivers reliable computer repair, laptop rental, networking, CCTV, and IT support services for
+      Akshita Vaults delivers reliable computer repair, laptop rental, networking, CCTV, and IT support services for
       homes and businesses with fast and trusted solutions.
     </p>
 

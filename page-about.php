@@ -11,7 +11,7 @@ Template Name: About Page
             <!-- Logo -->
             <div class="logo">
               <a href="<?php echo site_url('/'); ?>">
-                     <img src="<?php echo get_template_directory_uri(); ?>/img/RRC-Long-logo.png">
+                      <img src="<?php echo get_template_directory_uri(); ?>/img/akshita-vault-1.png">
                 </a>
             </div>
             <!-- Hamburger -->
