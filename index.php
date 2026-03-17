@@ -100,7 +100,7 @@
           <input type="tel" name="client_phone" placeholder="Your phone" required>
         </div>
 
-        <button type="submit">Submit Request</button>
+        <button type="submit" id="sing_up">Submit Request</button>
 
         <p id="formMessage"></p>
 
