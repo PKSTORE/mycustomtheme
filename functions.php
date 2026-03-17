@@ -298,3 +298,4 @@ function handle_contact_form() {
         'success' => true
     ]);
 }
+    }
