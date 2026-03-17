@@ -102,9 +102,80 @@ function rr_enquiry_column_data($column, $post_id)
 }
 
 add_action('manage_rr_enquiry_posts_custom_column', 'rr_enquiry_column_data', 10, 2);
+/* CONTACT MESSAGES POST TYPE */
+
+function rr_create_contact_post_type()
+{
+
+    register_post_type('rr_contact', array(
+
+        'labels' => array(
+            'name' => 'Contact Messages',
+            'singular_name' => 'Contact Message'
+        ),
+
+        'public' => false,
+        'show_ui' => true,
+        'menu_icon' => 'dashicons-email',
+        'supports' => array('title', 'editor')
+
+    ));
+
+}
+
+add_action('init', 'rr_create_contact_post_type');
 
 
- 
+
+/* SAVE CONTACT FORM DATA */
+
+function rr_save_contact_data()
+{
+
+    if (isset($_POST['submit_contact'])) {
+
+        $name = sanitize_text_field($_POST['contact_name']);
+        $phone = sanitize_text_field($_POST['contact_phone']);
+        $email = sanitize_email($_POST['contact_email']);
+        $message = sanitize_textarea_field($_POST['contact_message']);
+
+
+        /* Save in WordPress Dashboard */
+
+        wp_insert_post(array(
+
+            'post_title' => $name,
+
+            'post_content' =>
+                "Phone: " . $phone . "\n" .
+                "Email: " . $email . "\n\n" .
+                "Message:\n" . $message,
+
+            'post_type' => 'rr_contact',
+
+            'post_status' => 'publish'
+
+        ));
+
+
+        /* Send Email Notification */
+
+        $admin_email = get_option('admin_email');
+
+        $subject = "New Contact Message - RR Computers";
+
+        $body = "You received a new contact request.\n\n";
+        $body .= "Name: " . $name . "\n";
+        $body .= "Phone: " . $phone . "\n";
+        $body .= "Email: " . $email . "\n\n";
+        $body .= "Message:\n" . $message . "\n";
+
+        wp_mail($admin_email, $subject, $body);
+
+    }
+
+}
+
 add_action('init', 'rr_save_contact_data');
 /* CREATE COMPLAINT POST TYPE */
 
@@ -158,6 +229,10 @@ function rr_save_complaint_data()
             'post_status' => 'publish'
 
         ));
+
+
+
+
         /* Send email notification */
 
         $admin_email = get_option('admin_email');
@@ -172,58 +247,4 @@ function rr_save_complaint_data()
         wp_mail($admin_email, $subject, $body);
 add_action('init', 'rr_save_complaint_data');
 }
-}
-add_action('wp_ajax_send_contact_form', 'handle_contact_form');
-add_action('wp_ajax_nopriv_send_contact_form', 'handle_contact_form');
-
-function handle_contact_form() {
-    // 🧼 Sanitize input
-    $name = sanitize_text_field($_POST['name'] ?? '');
-    $email = sanitize_email($_POST['email'] ?? '');
-    $message = sanitize_textarea_field($_POST['message'] ?? '');
-
-    // ❗ Validation
-    if (empty($name) || empty($email) || empty($message)) {
-        wp_send_json([
-            'success' => false,
-            'message' => 'All fields required'
-        ]);
-    }
-
-    if (!is_email($email)) {
-        wp_send_json([
-            'success' => false,
-            'message' => 'Invalid email'
-        ]);
-    }
-
-    // 📧 Send email (admin)
-    $to = get_option('admin_email');
-
-    $subject = "New Contact Message";
-
-    $body = "Name: $name\nEmail: $email\nMessage:\n$message";
-
-    $headers = ['Content-Type: text/plain; charset=UTF-8'];
-
-    $sent = wp_mail($to, $subject, $body, $headers);
-
-    if (!$sent) {
-        wp_send_json([
-            'success' => false,
-            'message' => 'Mail failed. Try later.'
-        ]);
-    }
-
-    // 📩 Auto-reply (optional but pro)
-    wp_mail(
-        $email,
-        "We received your message",
-        "Hi $name,\n\nThanks for contacting us. We'll reply soon.",
-        $headers
-    );
-
-    wp_send_json([
-        'success' => true
-    ]);
 }
