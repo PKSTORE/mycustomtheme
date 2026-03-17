@@ -26,3 +26,26 @@ document.getElementById("sing_up").addEventListener("submit", function (e) {
     );
   }
 });
+
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  let formData = new FormData(this);
+
+  fetch("/wp-admin/admin-ajax.php", {
+    method: "POST",
+    body: formData,
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      if (data.success) {
+        alert("Message sent successfully!");
+        document.getElementById("contactForm").reset();
+      } else {
+        alert(data.message);
+      }
+    })
+    .catch((err) => {
+      alert("Something went wrong!");
+    });
+});

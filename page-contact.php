@@ -86,7 +86,7 @@
     </div>
 
     <!-- Right Form -->
-    <div class="contact-1-form">
+    <div class="contact-1-form" id="contactForm" method="post">
       <form method="post">
         <div class="form-group">
           <input type="text" name="contact_name" placeholder="Your name" required>
