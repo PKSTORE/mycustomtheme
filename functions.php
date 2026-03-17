@@ -231,21 +231,70 @@ function rr_save_complaint_data()
         ));
 
 
-        /* Send email notification */
+//         /* Send email notification */
 
-        $admin_email = get_option('admin_email');
+//         $admin_email = get_option('admin_email');
 
-        $subject = "New Complaint Submitted - RR Computers";
+//         $subject = "New Complaint Submitted - RR Computers";
 
-        $body = "A new complaint has been submitted.\n\n";
-        $body .= "Name: " . $name . "\n";
-        $body .= "Phone: " . $phone . "\n\n";
-        $body .= "Complaint:\n" . $message . "\n";
+//         $body = "A new complaint has been submitted.\n\n";
+//         $body .= "Name: " . $name . "\n";
+//         $body .= "Phone: " . $phone . "\n\n";
+//         $body .= "Complaint:\n" . $message . "\n";
 
-        wp_mail($admin_email, $subject, $body);
+//         wp_mail($admin_email, $subject, $body);
 
+//     }
+
+// }
+
+// add_action('init', 'rr_save_complaint_data');
+add_action('wp_ajax_send_contact_form', 'handle_contact_form');
+add_action('wp_ajax_nopriv_send_contact_form', 'handle_contact_form');
+
+function handle_contact_form() {
+
+    // Sanitize input
+    $name = sanitize_text_field($_POST['name']);
+    $email = sanitize_email($_POST['email']);
+    $message = sanitize_textarea_field($_POST['message']);
+
+    // Validation
+    if (empty($name) || empty($email) || empty($message)) {
+        wp_send_json([
+            'success' => false,
+            'message' => 'All fields are required!'
+        ]);
     }
 
-}
+    if (!is_email($email)) {
+        wp_send_json([
+            'success' => false,
+            'message' => 'Invalid email address!'
+        ]);
+    }
 
-add_action('init', 'rr_save_complaint_data');
+    // Admin email (YOU receive)
+    $to = get_option('abhi04309@gmail.com');
+    $subject = "New Contact Form Message";
+
+    $body = "
+        Name: $name\n
+        Email: $email\n
+        Message: $message
+    ";
+
+    $headers = ['Content-Type: text/plain; charset=UTF-8'];
+
+    wp_mail($to, $subject, $body, $headers);
+
+    // Auto-reply to user (PRO move)
+    $user_subject = "We received your message";
+    $user_body = "Hi $name,\n\nThanks for contacting us. We'll get back to you soon.";
+
+    wp_mail($email, $user_subject, $user_body, $headers);
+
+    wp_send_json([
+        'success' => true
+    ]);
+}

@@ -103,7 +103,7 @@
         <div class="form-group">
           <textarea name="contact_message" placeholder="Your message"></textarea>
         </div>
-
+         <input type="hidden" name="action" value="send_contact_form">
         <button type="submit" name="submit_contact">Submit Request</button>
       </form>
     </div>
