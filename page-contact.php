@@ -84,31 +84,31 @@
 
       </div>
     </div>
-
+ </div>
     <!-- Right Form -->
-    <div class="contact-1-form">
-      <form method="post">
-        <div class="form-group">
-          <input type="text" name="contact_name" placeholder="Your name" required>
-        </div>
-
-        <div class="form-group">
-          <input type="tel" name="contact_phone" placeholder="Your phone" required>
-        </div>
-
-        <div class="form-group">
-          <input type="email" name="contact_email" placeholder="Your mail" required>
-        </div>
-
-        <div class="form-group">
-          <textarea name="contact_message" placeholder="Your message"></textarea>
-        </div>
-
-        <button type="submit" name="submit_contact">Submit Request</button>
-      </form>
-    </div>
-
+   <form id="contactForm">
+  <div class="form-group">
+    <input type="text" name="contact_name" id="name" placeholder="Your name" required>
   </div>
+
+  <div class="form-group">
+    <input type="tel" name="contact_phone" id="phone" placeholder="Your phone" required>
+  </div>
+
+  <div class="form-group">
+    <input type="email" name="contact_email" id="email" placeholder="Your mail" required>
+  </div>
+
+  <div class="form-group">
+    <textarea name="contact_message" id="message" placeholder="Your message" required></textarea>
+  </div>
+
+  <button type="submit">Submit Request</button>
+</form>
+
+<p id="responseMsg"></p>
+
+  
 </section>
 <!-- footer start-->
 <footer class="site-footer">
