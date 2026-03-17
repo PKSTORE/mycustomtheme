@@ -229,25 +229,18 @@ function rr_save_complaint_data()
             'post_status' => 'publish'
 
         ));
-    }
+        /* Send email notification */
+
+        $admin_email = get_option('admin_email');
+
+        $subject = "New Complaint Submitted - RR Computers";
+
+        $body = "A new complaint has been submitted.\n\n";
+        $body .= "Name: " . $name . "\n";
+        $body .= "Phone: " . $phone . "\n\n";
+        $body .= "Complaint:\n" . $message . "\n";
+
+        wp_mail($admin_email, $subject, $body);
+add_action('init', 'rr_save_complaint_data');
 }
-
-
-//         /* Send email notification */
-
-//         $admin_email = get_option('admin_email');
-
-//         $subject = "New Complaint Submitted - RR Computers";
-
-//         $body = "A new complaint has been submitted.\n\n";
-//         $body .= "Name: " . $name . "\n";
-//         $body .= "Phone: " . $phone . "\n\n";
-//         $body .= "Complaint:\n" . $message . "\n";
-
-//         wp_mail($admin_email, $subject, $body);
-
-//     }
-
-// }
-
-// add_action('init', 'rr_save_complaint_data');
+}
