@@ -84,7 +84,6 @@
 
       </div>
     </div>
-    </div>
 
     <!-- Right Form -->
     <div class="contact-1-form">
@@ -109,7 +108,7 @@
       </form>
     </div>
 
-  
+  </div>
 </section>
 <!-- footer start-->
 <footer class="site-footer">
